@@ -81,4 +81,7 @@ def run_loader():
 
 
 if __name__ == "__main__":
+    import argparse
+    parser = argparse.ArgumentParser(description="SWITCHYARD Operational Serving Database Loader")
+    args = parser.parse_args()
     run_loader()

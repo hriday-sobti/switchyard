@@ -76,6 +76,9 @@ def run_benchmarks(scale: int = 50000):
     shutil.rmtree(benchmark_dir, ignore_errors=True)
     return results
 
-
 if __name__ == "__main__":
-    run_benchmarks(scale=25000)
+    import argparse
+    parser = argparse.ArgumentParser(description="SWITCHYARD Performance and Scalability Benchmark")
+    parser.add_argument("--scale", type=int, default=25000, help="Number of operational events for benchmark run (default 25000)")
+    args = parser.parse_args()
+    run_benchmarks(scale=args.scale)

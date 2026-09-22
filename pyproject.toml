@@ -40,3 +40,7 @@ testpaths = [
 pythonpath = [
     ".",
 ]
+filterwarnings = [
+    "ignore:.*starlette\\.testclient.*:Warning",
+    "ignore:.*The anyio\\.abc\\.BlockingPortal alias is deprecated.*:DeprecationWarning",
+]

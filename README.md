@@ -87,7 +87,7 @@ DATA → INFORMATION → PRIORITY → DECISION
 ### 2. Environment Setup
 ```bash
 # Clone repository
-git clone https://github.com/your-org/switchyard.git
+git clone https://github.com/hriday-sobti/switchyard.git
 cd switchyard
 
 # Configure environment variables
