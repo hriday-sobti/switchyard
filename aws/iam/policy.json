@@ -1,0 +1,44 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "SwitchyardS3LakehouseReadOnly",
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:ListBucket"
+      ],
+      "Resource": [
+        "arn:aws:s3:::switchyard-operational-lakehouse",
+        "arn:aws:s3:::switchyard-operational-lakehouse/processed/*"
+      ]
+    },
+    {
+      "Sid": "SwitchyardGlueCatalogReadOnly",
+      "Effect": "Allow",
+      "Action": [
+        "glue:GetDatabase",
+        "glue:GetTable",
+        "glue:GetPartitions"
+      ],
+      "Resource": [
+        "arn:aws:glue:us-east-1:*:catalog",
+        "arn:aws:glue:us-east-1:*:database/switchyard_analytics",
+        "arn:aws:glue:us-east-1:*:table/switchyard_analytics/*"
+      ]
+    },
+    {
+      "Sid": "SwitchyardAthenaExecution",
+      "Effect": "Allow",
+      "Action": [
+        "athena:StartQueryExecution",
+        "athena:GetQueryExecution",
+        "athena:GetQueryResults",
+        "athena:StopQueryExecution"
+      ],
+      "Resource": [
+        "arn:aws:athena:us-east-1:*:workgroup/primary"
+      ]
+    }
+  ]
+}

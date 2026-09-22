@@ -1,0 +1,57 @@
+# Python build and packaging
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+*.cover
+
+# Data lakes and generated operational datasets (do NOT commit large scale data)
+data/generated/*
+!data/generated/.gitkeep
+data/rejected/*
+!data/rejected/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Local SQLite databases and run caches
+*.sqlite
+*.sqlite3
+*.db
+switchyard_operational.db
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,40 @@
+// ============================================================================
+// Standardized Power BI DAX Measures for SWITCHYARD Operations Workbench
+// ============================================================================
+
+// 1. Total Operational Events
+Total Events = COUNTROWS(FactOperationalEvent)
+
+// 2. Incident Count (HTTP Status >= 500)
+Total Incidents = CALCULATE(
+    COUNTROWS(FactOperationalEvent),
+    FactOperationalEvent[status_code] >= 500
+)
+
+// 3. Operational Error Rate (%)
+Error Rate % = DIVIDE([Total Incidents], [Total Events], 0) * 100
+
+// 4. Active Backlog (Open Exceptions)
+Active Backlog = CALCULATE(
+    COUNTROWS(FactException),
+    NOT(FactException[lifecycle_state] IN { "RESOLVED", "CLOSED" })
+)
+
+// 5. Total Financial Exposure at Risk ($)
+Total Financial Exposure = SUM(FactException[financial_exposure])
+
+// 6. Critical P1 Incidents
+P1 Critical Exceptions = CALCULATE(
+    COUNTROWS(FactException),
+    FactException[priority_band] = "P1"
+)
+
+// 7. Average Latency (ms)
+Average Latency ms = AVERAGE(FactOperationalEvent[duration_ms])
+
+// 8. SLA Compliance Rate (%)
+SLA Compliance Rate % = 
+VAR TotalCases = COUNTROWS(FactSLA)
+VAR BreachedCases = CALCULATE(COUNTROWS(FactSLA), FactSLA[sla_status] = "BREACHED")
+RETURN
+DIVIDE(TotalCases - BreachedCases, TotalCases, 1) * 100

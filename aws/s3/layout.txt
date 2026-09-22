@@ -1,0 +1,33 @@
+# ============================================================================
+# AWS S3 Storage Prefix Architecture & Topology
+# ============================================================================
+
+# S3 Bucket URI Convention:
+# s3://switchyard-operational-lakehouse/
+
+# 1. Raw Zone
+# s3://switchyard-operational-lakehouse/raw/
+#   ├── operational_events/
+#   │   └── year=YYYY/month=MM/day=DD/raw_events_batch_UUID.json
+#   └── reference/
+#       ├── dim_customers.json
+#       ├── dim_services.json
+#       └── dim_locations.json
+
+# 2. Processed Zone (Partitioned Columnar Parquet with Snappy Compression)
+# s3://switchyard-operational-lakehouse/processed/
+#   ├── fact_operational_event/
+#   │   └── year=YYYY/month=MM/day=DD/part-*.parquet
+#   ├── fact_sla_record/
+#   │   └── year=YYYY/month=MM/part-*.parquet
+#   ├── dim_customers.parquet
+#   ├── dim_services.parquet
+#   ├── dim_locations.parquet
+#   └── dim_agents.parquet
+
+# 3. Rejected & Quarantine Audit Zone
+# s3://switchyard-operational-lakehouse/rejected/
+#   └── year=YYYY/month=MM/day=DD/quarantined_events_UUID.json
+
+# 4. Amazon Athena Query Results Staging
+# s3://switchyard-operational-lakehouse/athena-results/

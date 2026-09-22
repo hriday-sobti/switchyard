@@ -1,0 +1,86 @@
+{
+  "name": "SwitchyardOperationalReliabilityModel",
+  "compatibilityLevel": 1550,
+  "model": {
+    "culture": "en-US",
+    "entities": [
+      {
+        "name": "FactOperationalEvent",
+        "description": "Granular operational state-change and diagnostic events partitioned by date.",
+        "columns": [
+          {"name": "event_id", "dataType": "string"},
+          {"name": "timestamp", "dataType": "dateTime"},
+          {"name": "customer_id", "dataType": "string"},
+          {"name": "service_id", "dataType": "string"},
+          {"name": "location_id", "dataType": "string"},
+          {"name": "status_code", "dataType": "int64"},
+          {"name": "duration_ms", "dataType": "int64"},
+          {"name": "payload_bytes", "dataType": "int64"},
+          {"name": "is_error", "dataType": "boolean"}
+        ]
+      },
+      {
+        "name": "FactException",
+        "description": "Active and historical operational exception records with explainable priority scores.",
+        "columns": [
+          {"name": "exception_id", "dataType": "string"},
+          {"name": "case_id", "dataType": "string"},
+          {"name": "customer_id", "dataType": "string"},
+          {"name": "service_id", "dataType": "string"},
+          {"name": "location_id", "dataType": "string"},
+          {"name": "financial_exposure", "dataType": "double"},
+          {"name": "priority_score", "dataType": "double"},
+          {"name": "priority_band", "dataType": "string"},
+          {"name": "lifecycle_state", "dataType": "string"},
+          {"name": "created_at", "dataType": "dateTime"}
+        ]
+      },
+      {
+        "name": "DimCustomer",
+        "columns": [
+          {"name": "customer_id", "dataType": "string"},
+          {"name": "customer_name", "dataType": "string"},
+          {"name": "tier", "dataType": "string"},
+          {"name": "contract_sla_tier", "dataType": "string"}
+        ]
+      },
+      {
+        "name": "DimService",
+        "columns": [
+          {"name": "service_id", "dataType": "string"},
+          {"name": "service_name", "dataType": "string"},
+          {"name": "service_category", "dataType": "string"},
+          {"name": "tier_level", "dataType": "int64"}
+        ]
+      },
+      {
+        "name": "DimLocation",
+        "columns": [
+          {"name": "location_id", "dataType": "string"},
+          {"name": "region", "dataType": "string"},
+          {"name": "country", "dataType": "string"}
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "fromTable": "FactOperationalEvent",
+        "fromColumn": "customer_id",
+        "toTable": "DimCustomer",
+        "toColumn": "customer_id"
+      },
+      {
+        "fromTable": "FactOperationalEvent",
+        "fromColumn": "service_id",
+        "toTable": "DimService",
+        "toColumn": "service_id"
+      },
+      {
+        "fromTable": "FactOperationalEvent",
+        "fromColumn": "location_id",
+        "toTable": "DimLocation",
+        "toColumn": "location_id"
+      }
+    ]
+  }
+}
