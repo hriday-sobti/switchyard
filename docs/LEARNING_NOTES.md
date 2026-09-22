@@ -1,5 +1,4 @@
-# SWITCHYARD: Technical Learning Notes & Concept Compendium
-
+# Engineering Notes: Architecture & Data Foundations
 ## 1. Relational vs. Analytical Modeling (OLTP vs. OLAP)
 
 ### Relational OLTP (Online Transaction Processing)

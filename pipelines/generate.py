@@ -1,7 +1,7 @@
 """
-Deterministic high-volume synthetic enterprise data generator for SWITCHYARD.
-Generates interconnected graphs of Customers, Services, Locations, Agents,
-Operational Events, SLA Records, and Exceptions with configurable quality defect injection.
+Synthetic enterprise operational event generator.
+Generates relational streams of customers, services, locations, SLA records,
+and diagnostic events with configurable defect rates for data quality testing.
 """
 import argparse
 import json
