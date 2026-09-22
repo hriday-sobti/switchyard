@@ -1,7 +1,5 @@
 """
-Comprehensive Unit Tests for Entity Schemas and Serialization Contracts:
-Pydantic model constraints, regex ID validators, boundary status codes,
-and JSON de/serialization integrity.
+Unit tests for Pydantic schemas, validation boundaries, and SQLAlchemy entities.
 """
 from datetime import datetime, timezone
 import pytest

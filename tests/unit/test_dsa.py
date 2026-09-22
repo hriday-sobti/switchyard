@@ -1,7 +1,5 @@
 """
-Comprehensive Data Structures & Algorithmic Unit Tests:
-Max-Heap priority queue operations, updates, tie-breaking, empty state handling,
-and Sliding-Window eviction precision across various temporal scenarios.
+Unit tests for Max-Heap priority queue ordering and sliding-window event eviction.
 """
 from datetime import datetime, timezone, timedelta
 import pytest

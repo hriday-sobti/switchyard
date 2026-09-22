@@ -1,6 +1,5 @@
 """
-Comprehensive Unit Tests for Priority Scoring Engine:
-Multi-factor weights, normalization curves, band thresholds (P1-P4), and driver strings.
+Unit tests for multi-factor priority score calculation, threshold bands, and driver text.
 """
 import pytest
 from app.rules.priority_engine import ExplainablePriorityEngine

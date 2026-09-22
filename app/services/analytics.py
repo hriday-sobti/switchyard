@@ -1,6 +1,6 @@
 """
-Analytics service executing analytical SQL views against DuckDB over partitioned Parquet lakehouse.
-Provides seamless bridge for executive reporting and drill-down metrics.
+DuckDB analytics service executing analytical queries directly against partitioned Parquet files.
+Handles reliability metrics, bottleneck ranking, and hourly error rates.
 """
 from pathlib import Path
 from typing import List, Dict, Any

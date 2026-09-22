@@ -1,7 +1,6 @@
 """
-Comprehensive REST API Integration Test Suite:
-Query filters, pagination boundaries, HTTP status codes, payload structure assertions,
-and error handling across all exposed endpoints.
+Integration tests for FastAPI endpoints: filters, pagination boundaries,
+detail contracts, and error responses.
 """
 import pytest
 from fastapi.testclient import TestClient

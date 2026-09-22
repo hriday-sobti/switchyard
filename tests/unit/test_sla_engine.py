@@ -1,6 +1,5 @@
 """
-Comprehensive Unit Tests for SLA Engine:
-Boundary evaluations, ratios, tier combinations, clock skew, and negative/zero targets.
+Unit tests for SLA calculations, boundary ratios, and customer tier matrices.
 """
 from datetime import datetime, timezone, timedelta
 import pytest

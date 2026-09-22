@@ -172,7 +172,7 @@ switchyard/
 │   ├── benchmark.py               # Performance and scalability benchmark runner
 │   └── impact_model.py            # Simulated economic and operational impact calculator
 │
-└── docs/                          # Comprehensive architectural documentation
+└── docs/                          # System architecture and technical specifications
     ├── PROJECT_PLAN.md            # Execution plan and milestones
     ├── ARCHITECTURE.md            # In-depth system design & Mermaid diagrams
     ├── BUSINESS_REQUIREMENTS.md   # Formal BR and FR requirements

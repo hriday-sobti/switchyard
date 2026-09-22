@@ -2,7 +2,7 @@
 
 ## ADR-001: Storage Format for Analytical Historical Lakehouse
 - **Status:** Accepted
-- **Context:** SWITCHYARD requires an analytical storage format capable of handling millions of operational records with fast scan performance, compact storage footprint, and seamless cloud data-lake compatibility.
+- **Context:** SWITCHYARD requires an analytical storage format capable of handling millions of operational records with fast scan performance, compact storage footprint, and high-efficiency cloud data-lake compatibility.
 - **Decision:** Use **Apache Parquet** with **Snappy compression** organized into hierarchical date partitions (`year=YYYY/month=MM/day=DD/`).
 - **Consequences & Tradeoffs:**
   - *Benefits:* Columnar projection eliminates scanning unneeded attributes; min/max metadata enables predicate pushdown; native compatibility with DuckDB locally and AWS Athena in cloud mode; up to 80% compression versus raw CSV.

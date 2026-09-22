@@ -1,7 +1,6 @@
 """
-Comprehensive Data Quality Validation Suite:
-Tests individual error codes, multi-error combinations, boundary ranges,
-null handling, catalog referential integrity, and metrics reporting.
+Data quality validation tests: status code bounds, duration ranges, null fields,
+referential integrity against dimensions, and quarantine routing.
 """
 from datetime import datetime, timezone, timedelta
 import pytest

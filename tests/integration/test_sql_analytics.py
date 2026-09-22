@@ -1,6 +1,5 @@
 """
-Comprehensive Integration Tests for SQL Analytics over Partitioned Parquet Lakehouse.
-Validates aggregations, ranking metrics, latency percentiles, and partition pruning.
+SQL analytical view integration tests against DuckDB and partitioned Parquet files.
 """
 import pytest
 from app.services.analytics import DuckDBAnalyticsService
