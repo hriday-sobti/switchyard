@@ -2,6 +2,8 @@
 
 Operational Exception & Service Reliability Workbench built in Python, SQL, DuckDB, Parquet, and FastAPI.
 
+**Python 3.10+** | **Database:** SQLite & PostgreSQL | **Tests:** 229 Passing | **Power BI Ready** | **Excel Scenario Model** | **Author:** Hriday Singh Sobti
+
 ---
 
 ## What Problem This Solves
@@ -193,7 +195,7 @@ Open `http://127.0.0.1:8000/docs` in your browser to inspect and test the intera
 ```bash
 python -m pytest tests/
 ```
-All 177 tests run and pass in approximately 2 seconds with zero warnings.
+All 229 tests run and pass in approximately 2 seconds with zero warnings.
 
 ---
 
