@@ -9,7 +9,7 @@ description = "Operational Exception & Service Reliability Workbench"
 readme = "README.md"
 requires-python = ">=3.11"
 authors = [
-    { name = "Switchyard Engineering Team" }
+    { name = "Hriday Singh Sobti", email = "hridaysobti@gmail.com" }
 ]
 dependencies = [
     "duckdb>=1.1.0",

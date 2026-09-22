@@ -184,3 +184,11 @@ switchyard/
     ├── PERFORMANCE.md             # Measured performance benchmarks
     └── LEARNING_NOTES.md          # Theoretical and architectural compendium
 ```
+
+---
+
+## Author & Contributor
+
+- **Author:** Hriday Singh Sobti
+- **Contact:** [hridaysobti@gmail.com](mailto:hridaysobti@gmail.com)
+- **GitHub:** [@hriday-sobti](https://github.com/hriday-sobti)
