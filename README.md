@@ -6,7 +6,7 @@ Operational Exception & Service Reliability Workbench built in Python, SQL, Duck
 [![Database](https://img.shields.io/badge/Database-SQLite%20%26%20PostgreSQL-orange.svg)](https://www.postgresql.org/)
 [![Tests](https://img.shields.io/badge/Tests-229%20Passing-brightgreen.svg)](https://pytest.org/)
 [![Power BI Ready](https://img.shields.io/badge/Power%20BI-Ready-yellow.svg)](https://powerbi.microsoft.com/)
-[![Excel](https://img.shields.io/badge/Excel-Scenario%20Model-success.svg)](scripts/impact_model.py)
+[![Excel](https://img.shields.io/badge/Excel-Scenario%20Model-success.svg)](reports/switchyard_scenario_model.xlsx)
 [![Author](https://img.shields.io/badge/Author-Hriday%20Singh%20Sobti-lightgrey.svg)](https://github.com/hriday-sobti)
 
 ---
