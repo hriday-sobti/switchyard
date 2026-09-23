@@ -2,7 +2,12 @@
 
 Operational Exception & Service Reliability Workbench built in Python, SQL, DuckDB, Parquet, and FastAPI.
 
-**Python 3.10+** | **Database:** SQLite & PostgreSQL | **Tests:** 229 Passing | **Power BI Ready** | **Excel Scenario Model** | **Author:** Hriday Singh Sobti
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
+[![Database](https://img.shields.io/badge/Database-SQLite%20%26%20PostgreSQL-orange.svg)](https://www.postgresql.org/)
+[![Tests](https://img.shields.io/badge/Tests-229%20Passing-brightgreen.svg)](https://pytest.org/)
+[![Power BI Ready](https://img.shields.io/badge/Power%20BI-Ready-yellow.svg)](https://powerbi.microsoft.com/)
+[![Excel](https://img.shields.io/badge/Excel-Scenario%20Model-success.svg)](scripts/impact_model.py)
+[![Author](https://img.shields.io/badge/Author-Hriday%20Singh%20Sobti-lightgrey.svg)](https://github.com/hriday-sobti)
 
 ---
 
